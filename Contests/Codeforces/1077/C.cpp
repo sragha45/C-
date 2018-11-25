@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, a[1234567];
+int n;
 
 int main() {
     int n;
@@ -22,8 +22,8 @@ int main() {
 //        cout << endl << "Choosing: " << sum << endl;;
         while(l <= r) {             // check this
             int mid = (l + r) / 2;
-            int x = sum - a[mid].first;
-//            cout << mid << ' ' << x << endl;
+            long long x = sum - a[mid].first;
+            cout << mid << ' ' << x << endl;
             if(a[mid].first < x) {
                 l = mid + 1;
             }
@@ -31,7 +31,7 @@ int main() {
                 r = mid - 1;
             }
             else {
-    //            cerr << "Debug : " << l << ' ' << r << ' ' << i << endl;
+                cerr << "Debug : " << mid << ' ' << i << endl;
                 ok = (i != mid);
   //              cout << "Answer: " << x << ' ' << i << endl;
                 break;
